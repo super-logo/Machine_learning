@@ -119,14 +119,14 @@ def main():
     theta = np.zeros(x.shape[1])
     theta = theta.reshape(x.shape[1],1)
 
-    result = opt.fmin_tnc(func=cost_fuc, x0=theta, args=(x, y))
-    print(result)
-    plot_result(x, y, result[0], 4)
+    #  result = opt.fmin_tnc(func=cost_fuc, x0=theta, args=(x, y))
+    #  print(result)
+    #  plot_result(x, y, result[0], 4)
 
     #  use gradient_decent
-    #  result = gradient_decent(x, y, theta, 0.01, 200000, False)
-    #  print(result)
-    #  plot_result(x, y, result)
+    result = gradient_decent(x, y, theta, 0.01, 200000, False)
+    print(result)
+    plot_result(x, y, result, 4)
 
 
 main()
